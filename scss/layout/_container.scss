@@ -1,3 +1,8 @@
+body {
+  // display: flex;
+  margin: 0 240px;
+}
+
 .l-grid {
   display: flex;
   align-items: center;
@@ -5,8 +10,8 @@
 }
 
 #header {
-  margin: 53px 238px;
   display: flex;
+  justify-content: space-between;
   background: #f9f9f9;
 }
 
@@ -23,7 +28,7 @@
 }
 
 #main {
-  margin: 0 238px;
+  margin-top: 75px;
 }
 
 #pagination-container {

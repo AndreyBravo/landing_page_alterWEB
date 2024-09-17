@@ -1,3 +1,9 @@
 .navbar {
-    width: 760px;
+    display: flex;
+    align-items: center;
+    max-width: 720px;
+}
+
+.navbar ul {
+    gap: 45px;
 }
