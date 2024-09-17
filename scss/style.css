@@ -1,0 +1,356 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
+     -moz-text-size-adjust: none;
+          text-size-adjust: none;
+  text-decoration: none;
+}
+
+footer, header, nav, section, main {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: local("Gilroy Bold"), local("Gilroy-Bold"), url("../assets/fonts/Gilroy-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: local("Gilroy Semibold"), local("Gilroy-Semibold"), url("../assets/fonts/Gilroy-Semibold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: local("Gilroy Medium"), local("Gilroy-Medium"), url("../assets/fonts/Gilroy-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: local("Gilroy Regular"), local("Gilroy-Regular"), url("../assets/fonts/Gilroy-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+h1 {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 55px;
+  line-height: 66px;
+  color: #26497E;
+}
+
+p {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  color: #6c6c6c;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+button {
+  padding: 28px 95px;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #3a3a3a;
+  background: linear-gradient(180deg, #ff7144 0%, #fdce26 100%);
+  box-shadow: 0px 4px 30px #fc9e4a;
+  border-radius: 70px;
+  border: none;
+  cursor: pointer;
+}
+
+.l-grid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#header {
+  margin: 53px 238px;
+  display: flex;
+  background: #f9f9f9;
+}
+
+#header a {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 26px;
+  /* identical to box height */
+  letter-spacing: 0.05em;
+  color: #343434;
+}
+
+#main {
+  margin: 0 238px;
+}
+
+#pagination-container {
+  display: flex;
+  align-items: center;
+  color: #5f5f5f;
+}
+
+#pagination-container button {
+  padding: 0;
+  background: none;
+  box-shadow: none;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 27px;
+}
+
+#pagination-container .pagination-button {
+  display: flex;
+  align-items: center;
+  width: 20px;
+  color: #5f5f5f;
+}
+
+#pagination-numbers {
+  margin: 0 17px;
+  display: flex;
+  align-items: center;
+}
+
+#pagination {
+  position: absolute;
+  background: #f9f9f9;
+  position: relative;
+}
+
+#promo {
+  margin-top: 216px;
+  text-align: center;
+}
+
+#shop h1 {
+  margin-top: 123px;
+  text-align: center;
+}
+
+.logo {
+  width: 75px;
+  height: 98px;
+}
+
+.tel {
+  margin-left: 184.75px;
+  display: flex;
+  align-items: center;
+}
+
+.tel img {
+  width: 22.5px;
+  height: 22.5px;
+  margin-right: 16.75px;
+}
+
+.menu {
+  margin-left: 190px;
+  display: flex;
+  align-items: center;
+}
+
+.pagination-item {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pagination-text {
+  max-width: 453px;
+  margin-top: 41px;
+  margin-bottom: 76px;
+}
+
+.btn img {
+  width: 60.49px;
+  height: 60.49px;
+  position: absolute;
+  left: 289px;
+  top: 380px;
+}
+
+.btn button {
+  margin-bottom: 80px;
+}
+
+.row-img img {
+  position: relative;
+  top: 0px;
+  left: 66px;
+  width: 768px;
+  height: 535px;
+}
+
+.row-img-3 img {
+  left: 86px;
+  margin-right: -140px;
+}
+
+.pagination-number {
+  color: #B0B0B0;
+  margin-right: 15px;
+}
+
+.pagination-number:last-child {
+  margin-right: 0;
+}
+
+.show-modal {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: scale(1) !important;
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s !important;
+}
+
+.modal-text {
+  margin: 32px 0 48px 0;
+}
+
+.modal-input {
+  width: 433px;
+  height: 71px;
+  margin-bottom: 60px;
+  padding: 26px 0 26px 46px;
+  background: #ffffff;
+  border: 1px solid #cbcbcb;
+  border-radius: 70px;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  color: #aaaaaa;
+}
+
+.modal-content {
+  padding: 97px 72px 107px 72px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  overflow: scroll;
+  max-height: 90%;
+  width: 666px;
+  box-shadow: 0px 12px 17px rgba(71, 78, 98, 0.12), 0px 5px 22px rgba(71, 78, 98, 0.12), 0px 7px 8px rgba(71, 78, 98, 0.12);
+  border-radius: 12px;
+}
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.1);
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+  text-align: center;
+}
+
+.navbar {
+  width: 760px;
+}
+
+.promo-item {
+  margin-top: 106px;
+}
+
+.promo-item img {
+  width: 85px;
+}
+
+.promo-item p {
+  margin-top: 34px;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 26px;
+  color: #222222;
+}
+
+.shop-item {
+  margin-top: 60px;
+}
+
+.shop-item p {
+  width: 776px;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: #515151;
+}
+
+.shop-img {
+  width: 626px;
+  height: 552px;
+}
+
+.is-hidden {
+  display: none;
+}
+
+.is-active {
+  color: #26497E;
+}/*# sourceMappingURL=style.css.map */
