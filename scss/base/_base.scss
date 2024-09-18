@@ -31,7 +31,12 @@
 }
 
 body {
-  
+  // display: flex;
+  margin: 0 240px;
+}
+
+section {
+  margin-top: 130px;
 }
 
 h1 {
@@ -41,6 +46,7 @@ h1 {
   font-size: $base-size-48 + 7;
   line-height: 66px;
   color: $base-color-blue;
+  text-align: center;
 }
 
 p {
@@ -52,12 +58,15 @@ p {
   color: #6c6c6c;
 }
 
+a{
+  display: inline-block;
+}
 
 button {
   padding: 28px 95px;
   font-family: $base-font-gilroy;
   font-style: normal;
-  font-weight: $base-font-weight-500 +100;
+  font-weight: $base-font-weight-500 + 100;
   font-size: $base-size-22 - 2;
   line-height: 24px;
   color: #3a3a3a;

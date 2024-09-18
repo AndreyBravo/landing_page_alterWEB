@@ -120,6 +120,23 @@ function windowOnClick(event) {
 trigger.addEventListener("click", toggleModal);
 window.addEventListener("click", windowOnClick);
 
+//slider instagram
+let currentIndex = 0;
+let slides = document.getElementsByClassName('instagram-slide');
+let totalSlides = slides.length - 1;
+let visibleSlides = 3; // Количество отображаемых слайдов одновременно
+
+function changeSlide(direction) {
+    // Проверяем, чтобы не выйти за пределы доступных слайдов
+    currentIndex = (currentIndex + direction + totalSlides) % totalSlides;
+
+    // Обновляем положение слайдов
+    let offset = -(currentIndex * (100 / visibleSlides));
+    document.querySelector('.instagram-slider').style.transform = `translateX(${offset}%)`;
+}
+
+
+
 //input file
 function uploadFile(target) {
   document.getElementById("file-name").innerHTML = target.files[0].name;

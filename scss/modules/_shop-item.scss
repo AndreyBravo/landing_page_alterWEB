@@ -1,22 +1,15 @@
 .shop-item {
   margin-top: 60px;
-//   align-items: flex-end;
+  gap: 100px;
 }
 
-.shop-item p {
-  width: 776px;
-  font-family: $base-font-gilroy;
-  font-style: normal;
-  font-weight: $base-font-weight-500;
-  font-size: 20px;
-  line-height: 24px;
-
+.shop-text p {
   color: #515151;
 }
 
-.shop-img {
-  width: 626px;
-  height: 552px;
+.shop-text a {
+  margin-top: 20px;
+  font-size: 20px;
+  color: #26497E;
 }
-
 
