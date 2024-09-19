@@ -135,6 +135,12 @@ function changeSlide(direction) {
     document.querySelector('.instagram-slider').style.transform = `translateX(${offset}%)`;
 }
 
+//slider partner
+const slidesPartner = document.querySelectorAll(".partner-slider")
+const pagePartner = 0
+const totalSlidesPartner = slidesPartner.length - 1
+
+
 
 
 //input file
