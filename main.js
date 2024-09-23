@@ -122,25 +122,43 @@ window.addEventListener("click", windowOnClick);
 
 //slider instagram
 let currentIndex = 0;
-let slides = document.getElementsByClassName('instagram-slide');
+let slides = document.getElementsByClassName("instagram-slide");
 let totalSlides = slides.length - 1;
 let visibleSlides = 3; // Количество отображаемых слайдов одновременно
 
 function changeSlide(direction) {
-    // Проверяем, чтобы не выйти за пределы доступных слайдов
-    currentIndex = (currentIndex + direction + totalSlides) % totalSlides;
+  // Проверяем, чтобы не выйти за пределы доступных слайдов
+  currentIndex = (currentIndex + direction + totalSlides) % totalSlides;
 
-    // Обновляем положение слайдов
-    let offset = -(currentIndex * (100 / visibleSlides));
-    document.querySelector('.instagram-slider').style.transform = `translateX(${offset}%)`;
+  // Обновляем положение слайдов
+  let offset = -(currentIndex * (100 / visibleSlides));
+  document.querySelector(
+    ".instagram-slider"
+  ).style.transform = `translateX(${offset}%)`;
 }
 
 //slider partner
-const slidesPartner = document.querySelectorAll(".partner-slider")
-const pagePartner = 0
-const totalSlidesPartner = slidesPartner.length - 1
+const slidesPartner = document.querySelectorAll(".partner-slider-group");
+let pagePartner = 0;
+const totalSlidesPartner = slidesPartner.length - 1;
 
+function changeSlidePartner(direction) {
+  // Скрываем текущий слайд
+  slidesPartner[pagePartner].style.display = 'none';
 
+  // Обновляем индекс текущего слайда
+  pagePartner += direction;
+
+  // Проверяем, чтобы не выйти за пределы слайдов
+  if (pagePartner > totalSlidesPartner) {
+    pagePartner = 0; // Возвращаемся на первый слайд
+  } else if (pagePartner < 0) {
+    pagePartner = totalSlidesPartner; // Переходим на последний слайд
+  }
+
+  // Показываем новый слайд
+  slidesPartner[pagePartner].style.display = 'flex';
+}
 
 
 //input file

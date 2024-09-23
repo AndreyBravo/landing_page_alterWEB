@@ -4,10 +4,14 @@
   overflow: hidden;
 }
 
-.partner-slider {
-  display: flex;
+.partner-slider-group {
+  display: none;
+  justify-content: space-between;
   align-items: center;
-  gap: 130px;
+  
+  &:first-child {
+    display: flex;
+  }
 }
 
 .partner-pagination {
