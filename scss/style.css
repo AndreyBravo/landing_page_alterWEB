@@ -187,6 +187,11 @@ button {
   text-align: center;
 }
 
+#contacts h1 {
+  display: flex;
+  justify-content: start;
+}
+
 .logo {
   width: 75px;
   height: 98px;
@@ -431,6 +436,17 @@ button {
 #partner-pagination-numbers {
   display: flex;
   gap: 15px;
+}
+
+.contacts-container {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contacts-text-container {
+  display: flex;
+  gap: 25px;
 }
 
 .is-hidden {
