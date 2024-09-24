@@ -393,8 +393,9 @@ button {
 
 .partner-container {
   margin-top: 60px;
-  text-align: center;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .partner-slider-group {
@@ -407,7 +408,29 @@ button {
 }
 
 .partner-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-top: 95px;
+}
+.partner-pagination img {
+  width: 40px;
+}
+
+.partner-pagination button {
+  padding: 0;
+  background: none;
+  box-shadow: none;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 27px;
+}
+
+#partner-pagination-numbers {
+  display: flex;
+  gap: 15px;
 }
 
 .is-hidden {

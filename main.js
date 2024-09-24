@@ -139,12 +139,15 @@ function changeSlide(direction) {
 
 //slider partner
 const slidesPartner = document.querySelectorAll(".partner-slider-group");
+const paginationNumbersPartner = document.getElementById(
+  "partner-pagination-numbers"
+);
 let pagePartner = 0;
 const totalSlidesPartner = slidesPartner.length - 1;
 
 function changeSlidePartner(direction) {
   // Скрываем текущий слайд
-  slidesPartner[pagePartner].style.display = 'none';
+  slidesPartner[pagePartner].style.display = "none";
 
   // Обновляем индекс текущего слайда
   pagePartner += direction;
@@ -156,10 +159,38 @@ function changeSlidePartner(direction) {
     pagePartner = totalSlidesPartner; // Переходим на последний слайд
   }
 
+  handleActivePageNumberPartner();
   // Показываем новый слайд
-  slidesPartner[pagePartner].style.display = 'flex';
+  slidesPartner[pagePartner].style.display = "flex";
 }
 
+const appendPageNumberPartner = (index) => {
+  const pageNumber = document.createElement("button");
+  pageNumber.className = "partner-pagination-number";
+  pageNumber.innerHTML = index;
+  pageNumber.setAttribute("page-index", index);
+  pageNumber.setAttribute("aria-label", "Page " + index);
+
+  paginationNumbersPartner.appendChild(pageNumber);
+};
+
+const getPaginationNumbersPartner = () => {
+  for (let i = 1; i <= totalSlidesPartner + 1; i++) {
+    appendPageNumberPartner(i);
+  }
+};
+
+function handleActivePageNumberPartner() {
+  document.querySelectorAll(".partner-pagination-number").forEach((button) => {
+    button.classList.remove("is-active");
+    const pageIndex = Number(button.getAttribute("page-index"));
+    if (pageIndex == pagePartner+1) {
+      button.classList.add("is-active");
+    }
+  });
+}
+
+getPaginationNumbersPartner();
 
 //input file
 function uploadFile(target) {
@@ -193,8 +224,8 @@ document.querySelectorAll('a[href^="#"').forEach((link) => {
 //form
 
 const modal_input = document.getElementsByClassName("modal-input");
-console.log(modal_input);
-modal_input.onchange = console.log(modal_input.value);
+// console.log(modal_input);
+// modal_input.onchange = console.log(modal_input.value);
 
 // document.addEventListener("DOMContentLoaded", function () {
 //   const form = document.getElementById("form");

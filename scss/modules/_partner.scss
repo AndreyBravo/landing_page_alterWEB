@@ -1,7 +1,8 @@
 .partner-container {
   margin-top: 60px;
-  text-align: center;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  
 }
 
 .partner-slider-group {
@@ -15,5 +16,28 @@
 }
 
 .partner-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-top: 95px;
+
+  & img{
+    width: 40px;
+  }
+}
+
+.partner-pagination button {
+  padding: 0;
+  background: none;
+  box-shadow: none;
+  font-family: $base-font-gilroy;
+  font-style: normal;
+  font-weight: $base-font-weight-500 + 200;
+  font-size: $base-size-22;
+  line-height: 27px;
+}
+
+#partner-pagination-numbers{
+  display: flex;
+  gap: 15px;
 }
