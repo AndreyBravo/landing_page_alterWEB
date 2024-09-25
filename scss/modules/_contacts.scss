@@ -1,10 +1,35 @@
 .contacts-container {
-  margin-top: 40px;
   display: flex;
+  justify-content: space-between;
+  margin-bottom: 70px;
+}
+
+.contacts-text {
+  margin-top: 65px;
+  display: flex;
+  flex-direction: column;
   justify-content: space-between;
 }
 
 .contacts-text-container {
   display: flex;
+  align-items: center;
   gap: 25px;
+
+  & img {
+    width: 35px;
+  }
+
+  & a {
+    color: #343434;
+  }
+}
+
+.copyright {
+  margin-top: 60px;
+  color: #a8a8a8;
+}
+
+.contacts-map {
+  border: 10px solid #FDB32F;
 }
