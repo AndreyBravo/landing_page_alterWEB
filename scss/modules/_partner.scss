@@ -12,7 +12,8 @@
   align-items: center;
 
   & img {
-    height: 120px;
+    max-width: 480px;
+    max-height: 120px;
   }
   
   &:first-child {

@@ -102,6 +102,7 @@ p {
 
 a {
   display: inline-block;
+  text-decoration: none;
 }
 
 button {
@@ -146,36 +147,6 @@ button {
   margin-top: 75px;
 }
 
-#pagination-container {
-  display: flex;
-  align-items: center;
-  color: #5f5f5f;
-}
-
-#pagination-container button {
-  padding: 0;
-  background: none;
-  box-shadow: none;
-  font-family: "Gilroy";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 22px;
-  line-height: 27px;
-}
-
-#pagination-container .pagination-button {
-  display: flex;
-  align-items: center;
-  width: 20px;
-  color: #5f5f5f;
-}
-
-#pagination-numbers {
-  margin: 0 17px;
-  display: flex;
-  align-items: center;
-}
-
 #pagination {
   position: absolute;
   background: #f9f9f9;
@@ -218,31 +189,6 @@ button {
   align-items: center;
 }
 
-.pagination-item {
-  height: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.pagination-text {
-  max-width: 453px;
-  margin-top: 41px;
-  margin-bottom: 76px;
-}
-
-.btn img {
-  width: 60.49px;
-  height: 60.49px;
-  position: absolute;
-  left: 289px;
-  top: 380px;
-}
-
-.btn button {
-  margin-bottom: 80px;
-}
-
 .row-img {
   max-width: 725px;
   max-height: 525px;
@@ -251,15 +197,6 @@ button {
 .row-img-3 {
   width: 670px;
   height: 525px;
-}
-
-.pagination-number {
-  color: #B0B0B0;
-  margin-right: 15px;
-}
-
-.pagination-number:last-child {
-  margin-right: 0;
 }
 
 .show-modal {
@@ -414,7 +351,8 @@ button {
   align-items: center;
 }
 .partner-slider-group img {
-  height: 120px;
+  max-width: 480px;
+  max-height: 120px;
 }
 .partner-slider-group:first-child {
   display: flex;
@@ -482,6 +420,71 @@ button {
 
 .contacts-map {
   border: 10px solid #FDB32F;
+}
+
+#pagination-container {
+  display: flex;
+  align-items: center;
+  color: #5f5f5f;
+}
+
+#pagination-container button {
+  padding: 0;
+  background: none;
+  box-shadow: none;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 27px;
+}
+
+#pagination-container .pagination-button {
+  display: flex;
+  align-items: center;
+  width: 20px;
+  color: #5f5f5f;
+}
+
+#pagination-numbers {
+  margin: 0 17px;
+  display: flex;
+  align-items: center;
+}
+
+.pagination-item {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pagination-text {
+  max-width: 453px;
+  margin-top: 41px;
+  margin-bottom: 76px;
+}
+
+.pagination-number {
+  color: #b0b0b0;
+  margin-right: 15px;
+}
+
+.pagination-number:last-child {
+  margin-right: 0;
+}
+
+.pagination-btn {
+  margin-bottom: 80px;
+  max-width: 350px;
+  position: relative;
+}
+
+.pagination-book {
+  max-width: 60px;
+  position: absolute;
+  right: -5%;
+  top: 50%;
 }
 
 .is-hidden {
