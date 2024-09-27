@@ -106,11 +106,11 @@ a {
 }
 
 button {
-  padding: 28px 95px;
+  padding: 1em 2em; /* Размер кнопки адаптируется относительно текста */
+  font-size: 1rem;
   font-family: "Gilroy";
   font-style: normal;
   font-weight: 600;
-  font-size: 20px;
   line-height: 24px;
   color: #3a3a3a;
   background: linear-gradient(180deg, #ff7144 0%, #fdce26 100%);
@@ -118,6 +118,10 @@ button {
   border-radius: 70px;
   border: none;
   cursor: pointer;
+}
+
+img {
+  width: 100%;
 }
 
 .l-grid {
@@ -130,6 +134,7 @@ button {
   display: flex;
   justify-content: space-between;
   background: #f9f9f9;
+  gap: 25px;
 }
 
 #header a {
@@ -154,7 +159,6 @@ button {
 }
 
 #promo {
-  margin-top: 216px;
   text-align: center;
 }
 
@@ -163,14 +167,9 @@ button {
   justify-content: start;
 }
 
-@media screen and (max-width: 850px) {
-  h1 {
-    font-size: 36px;
-  }
-}
 .logo {
-  width: 75px;
-  height: 98px;
+  max-width: 75px;
+  max-height: 98px;
 }
 
 .tel {
@@ -187,16 +186,6 @@ button {
 .menu {
   display: flex;
   align-items: center;
-}
-
-.row-img {
-  max-width: 725px;
-  max-height: 525px;
-}
-
-.row-img-3 {
-  width: 670px;
-  height: 525px;
 }
 
 .show-modal {
@@ -255,13 +244,18 @@ button {
 }
 
 .navbar {
+  width: 720px;
   display: flex;
   align-items: center;
-  max-width: 720px;
+  justify-content: space-between;
 }
 
-.navbar ul {
-  gap: 45px;
+.navbar-list {
+  flex-basis: 720px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
 }
 
 .promo-item {
@@ -285,14 +279,20 @@ button {
   gap: 100px;
 }
 
+.shop-text {
+  width: 55%;
+}
+.shop-text a {
+  margin-top: 20px;
+  font-size: 20px;
+  color: #26497e;
+}
 .shop-text p {
   color: #515151;
 }
 
-.shop-text a {
-  margin-top: 20px;
-  font-size: 20px;
-  color: #26497E;
+.shop-img {
+  width: 40%;
 }
 
 .instagram-container {
@@ -340,26 +340,24 @@ button {
 
 .partner-container {
   margin-top: 60px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  width: 100%;
 }
 
 .partner-slider-group {
   display: none;
-  justify-content: space-between;
+  max-width: 100%;
   align-items: center;
+  justify-content: center;
+  gap: 150px;
 }
 .partner-slider-group img {
-  max-width: 480px;
+  width: 33%;
   max-height: 120px;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .partner-slider-group:first-child {
   display: flex;
-}
-.partner-slider-group:last-child {
-  justify-content: center;
-  gap: 150px;
 }
 
 .partner-pagination {
@@ -420,6 +418,20 @@ button {
 
 .contacts-map {
   border: 10px solid #FDB32F;
+  position: relative;
+  width: 60%;
+  padding-bottom: 35%;
+  height: 0;
+  overflow: hidden;
+}
+
+.contacts-map iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
 }
 
 #pagination-container {
@@ -453,16 +465,29 @@ button {
 }
 
 .pagination-item {
-  height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.pagination-text {
-  max-width: 453px;
+.pagination-item-text {
+  max-width: 30%;
+}
+.pagination-item-text h1 {
+  text-align: left;
+}
+.pagination-item-text p {
   margin-top: 41px;
   margin-bottom: 76px;
+}
+
+.row-img {
+  max-width: 60%;
+  max-height: 525px;
+}
+.row-img img {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .pagination-number {
@@ -475,9 +500,14 @@ button {
 }
 
 .pagination-btn {
+  width: 70%;
+  display: flex;
+  flex-wrap: wrap;
   margin-bottom: 80px;
-  max-width: 350px;
   position: relative;
+}
+.pagination-btn button {
+  width: 100%;
 }
 
 .pagination-book {
@@ -497,4 +527,47 @@ button {
 
 .mb-20 {
   margin-bottom: 20px;
+}
+
+@media screen and (max-width: 1400px) {
+  body {
+    margin: 0 10%; /* Уменьшаем отступы при средней ширине экрана */
+  }
+  h1 {
+    font-size: 36px;
+    line-height: 42px;
+  }
+  .pagination-btn {
+    width: 100%;
+  }
+  .shop-item {
+    gap: 10px;
+  }
+  .partner-slider-group {
+    gap: 10px;
+  }
+}
+@media screen and (max-width: 850px) {
+  body {
+    margin: 0 40px; /* Устанавливаем фиксированные отступы при экранах 850px и меньше */
+  }
+  h1 {
+    font-size: 36px;
+    line-height: 42px;
+  }
+  p {
+    font-size: 18px;
+    line-height: 18px;
+  }
+  .pagination-item-text {
+    max-width: 40%;
+  }
+  .row-img {
+    max-width: 50%;
+    max-height: 525px;
+  }
+  .row-img img {
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
 }/*# sourceMappingURL=style.css.map */

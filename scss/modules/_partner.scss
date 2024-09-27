@@ -1,28 +1,23 @@
 .partner-container {
   margin-top: 60px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;  
+  width: 100%;
 }
-
 
 .partner-slider-group {
   display: none;
-  justify-content: space-between;
+  max-width: 100%;
   align-items: center;
+  justify-content: center;
+  gap: 150px;
 
   & img {
-    max-width: 480px;
+    width: 33%;
     max-height: 120px;
-  }
-  
-  &:first-child {
-    display: flex;
+    object-fit: contain;
   }
 
-  &:last-child {
-    justify-content: center;
-    gap: 150px;
+  &:first-child {
+    display: flex;
   }
 }
 
@@ -32,7 +27,7 @@
   justify-content: center;
   margin-top: 95px;
 
-  & img{
+  & img {
     width: 40px;
   }
 }
@@ -48,7 +43,7 @@
   line-height: 27px;
 }
 
-#partner-pagination-numbers{
+#partner-pagination-numbers {
   display: flex;
   gap: 15px;
 }

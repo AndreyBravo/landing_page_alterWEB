@@ -1,9 +1,14 @@
 .navbar {
-    display: flex;
-    align-items: center;
-    max-width: 720px;
+  width: 720px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.navbar ul {
-    gap: 45px;
+.navbar-list {
+  flex-basis: 720px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
 }

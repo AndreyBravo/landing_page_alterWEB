@@ -3,13 +3,19 @@
   gap: 100px;
 }
 
-.shop-text p {
-  color: #515151;
+.shop-text {
+  width: 55%;
+  & a {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #26497e;
+  }
+
+  & p {
+    color: #515151;
+  }
 }
 
-.shop-text a {
-  margin-top: 20px;
-  font-size: 20px;
-  color: #26497E;
+.shop-img {
+  width: 40%;
 }
-

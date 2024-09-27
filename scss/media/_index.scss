@@ -1,0 +1,54 @@
+@media screen and (max-width: 1400px) {
+  body {
+    margin: 0 10%; /* Уменьшаем отступы при средней ширине экрана */
+  }
+
+  h1 {
+    font-size: 36px;
+    line-height: 42px;
+  }
+
+  .pagination-btn {
+    width: 100%;
+  }
+
+  .shop-item {
+    gap: 10px;
+  }
+
+  .partner-slider-group {
+    gap: 10px;
+  }
+
+}
+
+@media screen and (max-width: 850px) {
+  body {
+    margin: 0 40px; /* Устанавливаем фиксированные отступы при экранах 850px и меньше */
+  }
+
+  h1 {
+    font-size: 36px;
+    line-height: 42px;
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  .pagination-item-text {
+    max-width: 40%;
+  }
+
+  .row-img {
+    max-width: 50%;
+    max-height: 525px;
+
+    & img {
+      object-fit: cover;
+    }
+  }
+
+  
+}

@@ -31,7 +31,6 @@
 }
 
 body {
-  // display: flex;
   margin: 0 240px;
 }
 
@@ -64,11 +63,11 @@ a{
 }
 
 button {
-  padding: 28px 95px;
+  padding: 1em 2em; /* Размер кнопки адаптируется относительно текста */
+  font-size: 1rem;
   font-family: $base-font-gilroy;
   font-style: normal;
   font-weight: $base-font-weight-500 + 100;
-  font-size: $base-size-22 - 2;
   line-height: 24px;
   color: #3a3a3a;
   background: linear-gradient(180deg, #ff7144 0%, #fdce26 100%);
@@ -76,4 +75,8 @@ button {
   border-radius: 70px;
   border: none;
   cursor: pointer;
+}
+
+img {
+  width: 100%;
 }

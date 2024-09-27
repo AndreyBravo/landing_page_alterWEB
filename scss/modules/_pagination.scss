@@ -29,16 +29,31 @@
 }
 
 .pagination-item {
-  height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.pagination-text {
-  max-width: 453px;
-  margin-top: 41px;
-  margin-bottom: 76px;
+.pagination-item-text {
+  max-width: 30%;
+
+  & h1 {
+    text-align: left;
+  }
+
+  & p {
+    margin-top: 41px;
+    margin-bottom: 76px;
+  }
+}
+
+.row-img {
+  max-width: 60%;
+  max-height: 525px;
+
+  & img{
+    object-fit: cover;
+  }
 }
 
 .pagination-number {
@@ -51,14 +66,20 @@
 }
 
 .pagination-btn {
-    margin-bottom: 80px;
-    max-width: 350px;
-    position: relative;
+  width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 80px;
+  position: relative;
+
+  & button {
+    width: 100%;
+  }
 }
 
 .pagination-book {
-    max-width:60px ;
-    position: absolute;
-    right: -5%;
-    top: 50%;
+  max-width: 60px;
+  position: absolute;
+  right: -5%;
+  top: 50%;
 }
