@@ -258,6 +258,12 @@ img {
   gap: 25px;
 }
 
+.promo-grid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .promo-item {
   margin-top: 106px;
 }
@@ -551,6 +557,9 @@ img {
   body {
     margin: 0 40px; /* Устанавливаем фиксированные отступы при экранах 850px и меньше */
   }
+  #header a {
+    font-size: 14px;
+  }
   h1 {
     font-size: 36px;
     line-height: 42px;
@@ -558,6 +567,9 @@ img {
   p {
     font-size: 18px;
     line-height: 18px;
+  }
+  .navbar-list {
+    gap: 10px;
   }
   .pagination-item-text {
     max-width: 40%;
@@ -569,5 +581,49 @@ img {
   .row-img img {
     -o-object-fit: cover;
        object-fit: cover;
+  }
+  .promo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .shop-img,
+  .shop-text {
+    width: 50%;
+  }
+  #contacts h1 {
+    justify-content: center;
+  }
+  .contacts-container {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .contacts-text {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .contacts-text img {
+    width: 25px;
+  }
+  .contacts-text .copyright {
+    grid-column: 2;
+    align-self: center;
+    justify-self: end;
+  }
+  .contacts-text:last-child {
+    grid-column: 2;
+    align-self: center;
+    justify-self: end;
+  }
+  .contacts-text-container:nth-of-type(2) {
+    grid-column: 1;
+  }
+  .contacts-map {
+    margin-top: 50px;
+    width: 100%;
+  }
+  .mb-20 {
+    margin-bottom: 0;
   }
 }/*# sourceMappingURL=style.css.map */
