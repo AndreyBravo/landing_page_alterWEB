@@ -8,29 +8,29 @@ const paginationLimit = 1;
 const pageCount = Math.ceil(listItems.length / paginationLimit);
 let currentPage = 1;
 
-const disableButton = (button) => {
-  button.classList.add("disabled");
-  button.setAttribute("disabled", true);
-};
+// const disableButton = (button) => {
+//   button.classList.add("disabled");
+//   button.setAttribute("disabled", true);
+// };
 
-const enableButton = (button) => {
-  button.classList.remove("disabled");
-  button.removeAttribute("disabled");
-};
+// const enableButton = (button) => {
+//   button.classList.remove("disabled");
+//   button.removeAttribute("disabled");
+// };
 
-const handlePageButtonsStatus = () => {
-  if (currentPage === 1) {
-    disableButton(prevButton);
-  } else {
-    enableButton(prevButton);
-  }
+// const handlePageButtonsStatus = () => {
+//   if (currentPage === 1) {
+//     disableButton(prevButton);
+//   } else {
+//     enableButton(prevButton);
+//   }
 
-  if (pageCount === currentPage) {
-    disableButton(nextButton);
-  } else {
-    enableButton(nextButton);
-  }
-};
+//   if (pageCount === currentPage) {
+//     disableButton(nextButton);
+//   } else {
+//     enableButton(nextButton);
+//   }
+// };
 
 const handleActivePageNumber = () => {
   document.querySelectorAll(".pagination-number").forEach((button) => {
@@ -43,7 +43,7 @@ const handleActivePageNumber = () => {
 };
 
 const appendPageNumber = (index) => {
-  const pageNumber = document.createElement("button");
+  const pageNumber = document.createElement("a");
   pageNumber.className = "pagination-number";
   pageNumber.innerHTML = index;
   pageNumber.setAttribute("page-index", index);
@@ -59,10 +59,18 @@ const getPaginationNumbers = () => {
 };
 
 const setCurrentPage = (pageNum) => {
+  // Проверяем, чтобы не выйти за пределы слайдов
+  if (pageNum > pageCount) {
+    // currentPage === 3 ? currentPage = 0 : null;
+    currentPage = pageCount; // Возвращаемся на первый слайд
+  } else if (pageNum < 0) {
+    currentPage = pageCount; // Переходим на последний слайд
+  }
+
   currentPage = pageNum;
 
   handleActivePageNumber();
-  handlePageButtonsStatus();
+  // handlePageButtonsStatus();
 
   const prevRange = (pageNum - 1) * paginationLimit;
   const currRange = pageNum * paginationLimit;
@@ -80,10 +88,12 @@ window.addEventListener("load", () => {
   setCurrentPage(1);
 
   prevButton.addEventListener("click", () => {
+    currentPage === 1 ? (currentPage = 4) : null;
     setCurrentPage(currentPage - 1);
   });
 
   nextButton.addEventListener("click", () => {
+    currentPage === 3 ? (currentPage = 0) : null;
     setCurrentPage(currentPage + 1);
   });
 
@@ -121,20 +131,36 @@ trigger.addEventListener("click", toggleModal);
 window.addEventListener("click", windowOnClick);
 
 //slider instagram
-let currentIndex = 0;
+const visibleSlides = 2; // Количество отображаемых слайдов одновременно
+let currentPageSlides = 1;
 let slides = document.getElementsByClassName("instagram-slide");
-let totalSlides = slides.length - 1;
-let visibleSlides = 3; // Количество отображаемых слайдов одновременно
+const pageCountSlider = Math.ceil(slides.length / visibleSlides);
+
+[...slides].forEach((item, index) => {
+  if (index >= currentPageSlides * visibleSlides) {
+    item.classList.add("is-hidden");
+  }
+});
 
 function changeSlide(direction) {
-  // Проверяем, чтобы не выйти за пределы доступных слайдов
-  currentIndex = (currentIndex + direction + totalSlides) % totalSlides;
 
-  // Обновляем положение слайдов
-  let offset = -(currentIndex * (100 / visibleSlides));
-  document.querySelector(
-    ".instagram-slider"
-  ).style.transform = `translateX(${offset}%)`;
+  direction > 0 ? (currentPageSlides += 1) : (currentPageSlides -= 1);
+  if (currentPageSlides > pageCountSlider) {
+    currentPageSlides = 1;
+  } else if (currentPageSlides < 1) {
+    console.log(pageCountSlider);
+    currentPageSlides = pageCountSlider;
+  }
+
+  const prevRange = (currentPageSlides - 1) * visibleSlides;
+  const currRange = currentPageSlides * visibleSlides;
+
+  [...slides].forEach((item, index) => {
+    item.classList.add("is-hidden");
+    if (index >= prevRange && index < currRange) {
+      item.classList.remove("is-hidden");
+    }
+  });
 }
 
 //slider partner
@@ -165,7 +191,7 @@ function changeSlidePartner(direction) {
 }
 
 const appendPageNumberPartner = (index) => {
-  const pageNumber = document.createElement("button");
+  const pageNumber = document.createElement("a");
   pageNumber.className = "partner-pagination-number";
   pageNumber.innerHTML = index;
   pageNumber.setAttribute("page-index", index);
@@ -184,7 +210,7 @@ function handleActivePageNumberPartner() {
   document.querySelectorAll(".partner-pagination-number").forEach((button) => {
     button.classList.remove("is-active");
     const pageIndex = Number(button.getAttribute("page-index"));
-    if (pageIndex == pagePartner+1) {
+    if (pageIndex == pagePartner + 1) {
       button.classList.add("is-active");
     }
   });

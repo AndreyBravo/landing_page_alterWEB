@@ -75,6 +75,11 @@ button {
   border-radius: 70px;
   border: none;
   cursor: pointer;
+
+  &:hover{
+    color: #fff;
+    background: linear-gradient(180deg, #fe5b29 0%, #fcc80c 100%);
+  }
 }
 
 img {

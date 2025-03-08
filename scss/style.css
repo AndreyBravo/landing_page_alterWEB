@@ -119,6 +119,10 @@ button {
   border: none;
   cursor: pointer;
 }
+button:hover {
+  color: #fff;
+  background: linear-gradient(180deg, #fe5b29 0%, #fcc80c 100%);
+}
 
 img {
   width: 100%;
@@ -392,6 +396,10 @@ img {
   gap: 15px;
 }
 
+.next, .prev {
+  cursor: pointer;
+}
+
 .contacts-container {
   display: flex;
   justify-content: space-between;
@@ -489,7 +497,7 @@ img {
 
 .row-img {
   max-width: 60%;
-  max-height: 525px;
+  height: 525px;
 }
 .row-img img {
   -o-object-fit: cover;
