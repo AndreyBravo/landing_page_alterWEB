@@ -329,8 +329,7 @@ img {
 }
 
 .instagram-slide {
-  flex: 0 0 calc(33.33% - 35px);
-  transition: opacity 0.5s ease-in-out;
+  transition: opacity 1.5s ease-in-out;
 }
 
 .instagram-slide {
@@ -482,6 +481,7 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 30px;
 }
 
 .pagination-item-text {
@@ -495,13 +495,11 @@ img {
   margin-bottom: 76px;
 }
 
-.row-img {
-  max-width: 60%;
-  height: 525px;
-}
 .row-img img {
-  -o-object-fit: cover;
-     object-fit: cover;
+  height: 700px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  float: left;
 }
 
 .pagination-number {

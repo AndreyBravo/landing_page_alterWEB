@@ -32,6 +32,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 30px;
 }
 
 .pagination-item-text {
@@ -48,11 +49,10 @@
 }
 
 .row-img {
-  max-width: 60%;
-  height: 525px;
-
-  & img{
-    object-fit: cover;
+  & img {
+    height: 700px;
+    object-fit: contain;
+    float: left;
   }
 }
 
