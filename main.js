@@ -131,37 +131,52 @@ trigger.addEventListener("click", toggleModal);
 window.addEventListener("click", windowOnClick);
 
 //slider instagram
-const visibleSlides = 2; // Количество отображаемых слайдов одновременно
-let currentPageSlides = 1;
-let slides = document.getElementsByClassName("instagram-slide");
-const pageCountSlider = Math.ceil(slides.length / visibleSlides);
+// const visibleSlides = 2; // Количество отображаемых слайдов одновременно
+// let currentPageSlides = 1;
+// let slides = document.getElementsByClassName("instagram-slide");
+// const pageCountSlider = Math.ceil(slides.length / visibleSlides);
 
-[...slides].forEach((item, index) => {
-  if (index >= currentPageSlides * visibleSlides) {
-    item.classList.add("is-hidden");
-  }
+// [...slides].forEach((item, index) => {
+//   if (index >= currentPageSlides * visibleSlides) {
+//     item.classList.add("is-hidden");
+//   }
+// });
+
+// function changeSlide(direction) {
+
+//   direction > 0 ? (currentPageSlides += 1) : (currentPageSlides -= 1);
+//   if (currentPageSlides > pageCountSlider) {
+//     currentPageSlides = 1;
+//   } else if (currentPageSlides < 1) {
+//     console.log(pageCountSlider);
+//     currentPageSlides = pageCountSlider;
+//   }
+
+//   const prevRange = (currentPageSlides - 1) * visibleSlides;
+//   const currRange = currentPageSlides * visibleSlides;
+
+//   [...slides].forEach((item, index) => {
+//     item.classList.add("is-hidden");
+//     if (index >= prevRange && index < currRange) {
+//       item.classList.remove("is-hidden");
+//     }
+//   });
+// }
+
+const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  slidesPerView: 3,
+  spaceBetween: 35,
+  direction: 'horizontal',
+  loop: true,
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.s-button-next',
+    prevEl: '.s-button-prev',
+  },
+
 });
-
-function changeSlide(direction) {
-
-  direction > 0 ? (currentPageSlides += 1) : (currentPageSlides -= 1);
-  if (currentPageSlides > pageCountSlider) {
-    currentPageSlides = 1;
-  } else if (currentPageSlides < 1) {
-    console.log(pageCountSlider);
-    currentPageSlides = pageCountSlider;
-  }
-
-  const prevRange = (currentPageSlides - 1) * visibleSlides;
-  const currRange = currentPageSlides * visibleSlides;
-
-  [...slides].forEach((item, index) => {
-    item.classList.add("is-hidden");
-    if (index >= prevRange && index < currRange) {
-      item.classList.remove("is-hidden");
-    }
-  });
-}
 
 //slider partner
 const slidesPartner = document.querySelectorAll(".partner-slider-group");
