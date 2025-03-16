@@ -176,6 +176,27 @@ const swiper = new Swiper('.swiper', {
     prevEl: '.s-button-prev',
   },
 
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+      direction: 'vertical'
+    },
+    // when window width is >= 480px
+    480: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      direction: 'vertical'
+    },
+    // when window width is >= 640px
+    850: {
+      slidesPerView: 3,
+      spaceBetween: 35,
+      direction: 'horizontal'
+    }
+  }
+
 });
 
 //slider partner

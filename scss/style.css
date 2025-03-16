@@ -290,9 +290,6 @@ img {
   gap: 100px;
 }
 
-.shop-text {
-  width: 55%;
-}
 .shop-text a {
   margin-top: 20px;
   font-size: 20px;
@@ -304,18 +301,17 @@ img {
 }
 
 .shop-img {
-  width: 40%;
+  width: 300px;
+  height: 240px;
 }
 
 .swiper {
-  width: 100%;
-  height: 330px;
-  margin-top: 60px;
   text-align: center;
 }
 
 .instagram-swiper-wrapper-button {
-  margin-bottom: 35px;
+  margin-top: 60px;
+  margin-bottom: 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -328,6 +324,8 @@ img {
 .swiper-slide img {
   width: 100%;
   height: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
 }
 
 .instagram-link {
@@ -383,6 +381,7 @@ img {
 
 #partner-pagination-numbers {
   display: flex;
+  margin: 0 15px;
   gap: 15px;
 }
 
@@ -583,6 +582,13 @@ img {
   .promo-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+  }
+  #instagram {
+    max-width: 500px;
+    margin: 130px auto 0 auto;
+  }
+  .swiper {
+    height: 900px;
   }
   .shop-img,
   .shop-text {

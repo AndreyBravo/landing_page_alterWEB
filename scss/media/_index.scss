@@ -62,6 +62,15 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
+  #instagram {
+    max-width: 500px;
+    margin: 130px auto 0 auto;
+  }
+
+  .swiper {
+    height: 900px; 
+  }
+
   .shop-img,
   .shop-text {
     width: 50%;
