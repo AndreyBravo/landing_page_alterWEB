@@ -263,6 +263,12 @@ img {
   gap: 25px;
 }
 
+.mobile-menu {
+  width: 25px;
+  display: none;
+  align-items: center;
+}
+
 .promo-grid {
   display: flex;
   align-items: center;
@@ -295,6 +301,7 @@ img {
 
 .shop-text {
   text-align: left;
+  width: 60%;
 }
 .shop-text a {
   margin-top: 20px;
@@ -306,7 +313,7 @@ img {
 }
 
 .shop-img {
-  width: 300px;
+  width: 40%;
 }
 
 .swiper {
@@ -524,6 +531,17 @@ img {
   top: 50%;
 }
 
+.pagination-btn-mobile {
+  width: 70%;
+  display: none;
+  flex-wrap: wrap;
+  margin-bottom: 80px;
+  position: relative;
+}
+.pagination-btn-mobile button {
+  width: 100%;
+}
+
 .is-hidden {
   display: none;
 }
@@ -633,5 +651,35 @@ img {
   }
   .mb-20 {
     margin-bottom: 0;
+  }
+}
+@media screen and (max-width: 600px) {
+  section {
+    margin-top: 55px;
+  }
+  .navbar {
+    display: none;
+  }
+  .mobile-menu {
+    display: flex;
+  }
+  .pagination-btn {
+    display: none;
+  }
+  .pagination-btn-mobile {
+    display: flex;
+  }
+  .pagination-item {
+    flex-direction: column;
+  }
+  .pagination-item-text {
+    width: 100%;
+  }
+  .row-img {
+    max-width: 100%;
+    height: 220px;
+  }
+  .row-img img {
+    height: 100%;
   }
 }/*# sourceMappingURL=style.css.map */

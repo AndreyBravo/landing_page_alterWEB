@@ -68,7 +68,7 @@
   }
 
   .swiper {
-    height: 900px; 
+    height: 900px;
   }
 
   .shop-img,
@@ -121,5 +121,44 @@
 
   .mb-20 {
     margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  section {
+    margin-top: 55px;
+  }
+
+  .navbar {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: flex;
+  }
+
+  .pagination-btn {
+    display: none;
+  }
+
+  .pagination-btn-mobile {
+    display: flex;
+  }
+
+  .pagination-item {
+    flex-direction: column;
+  }
+
+  .pagination-item-text {
+    width: 100%;
+  }
+
+  .row-img {
+    max-width: 100%;
+    height: 220px;
+
+    img{
+      height: 100%;
+    }
   }
 }

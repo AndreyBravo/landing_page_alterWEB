@@ -84,3 +84,15 @@
   right: -5%;
   top: 50%;
 }
+
+.pagination-btn-mobile {
+  width: 70%;
+  display: none;
+  flex-wrap: wrap;
+  margin-bottom: 80px;
+  position: relative;
+
+  & button {
+    width: 100%;
+  }
+}
