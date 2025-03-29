@@ -249,14 +249,13 @@ img {
 }
 
 .navbar {
-  width: 720px;
+  max-width: 720px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .navbar-list {
-  flex-basis: 720px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -556,7 +555,11 @@ img {
 
 @media screen and (max-width: 1400px) {
   body {
-    margin: 0 10%; /* Уменьшаем отступы при средней ширине экрана */
+    width: 80%;
+    margin: 0 auto; /* Уменьшаем отступы при средней ширине экрана */
+  }
+  #header a {
+    font-size: clamp(1rem, 2vw, 2rem);
   }
   h1 {
     font-size: 36px;
@@ -573,11 +576,8 @@ img {
   }
 }
 @media screen and (max-width: 850px) {
-  body {
-    margin: 0 40px; /* Устанавливаем фиксированные отступы при экранах 850px и меньше */
-  }
   #header a {
-    font-size: 14px;
+    font-size: clamp(0.5rem, 2vw, 2rem);
   }
   h1 {
     font-size: 36px;
@@ -654,8 +654,18 @@ img {
   }
 }
 @media screen and (max-width: 600px) {
+  body {
+    width: 90%;
+  }
+  #header a {
+    font-size: 14px;
+  }
   section {
-    margin-top: 55px;
+    margin-top: 45px;
+  }
+  #instagram {
+    max-width: 500px;
+    margin: 45px auto 0 auto;
   }
   .navbar {
     display: none;
@@ -668,12 +678,26 @@ img {
   }
   .pagination-btn-mobile {
     display: flex;
+    margin-bottom: 40px;
   }
   .pagination-item {
     flex-direction: column;
+    gap: 0;
   }
   .pagination-item-text {
+    max-width: 100%;
+  }
+  .pagination-item-text p {
+    margin-bottom: 10px;
+  }
+  .shop-item {
+    flex-direction: column;
+  }
+  .shop-img, .shop-text {
     width: 100%;
+  }
+  .promo-item {
+    margin-top: 50px;
   }
   .row-img {
     max-width: 100%;
@@ -681,5 +705,11 @@ img {
   }
   .row-img img {
     height: 100%;
+  }
+}
+@media screen and (max-width: 380px) {
+  .promo-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
   }
 }/*# sourceMappingURL=style.css.map */
