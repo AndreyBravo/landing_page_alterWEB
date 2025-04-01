@@ -712,4 +712,22 @@ img {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
   }
+  .partner-slider-group {
+    height: 400px;
+    flex-direction: column;
+    gap: 50px;
+  }
+  .partner-slider-group img {
+    width: 80%;
+  }
+  .contacts-container {
+    margin-bottom: 40px;
+  }
+  .contacts-text {
+    display: flex;
+    gap: 10px;
+  }
+  .contacts-map {
+    height: 170px;
+  }
 }/*# sourceMappingURL=style.css.map */
