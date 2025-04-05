@@ -51,7 +51,7 @@
 
 .row-img {
   & img {
-    height: 700px;
+    // height: 700px;
     object-fit: contain;
     float: left;
   }
@@ -67,13 +67,15 @@
 }
 
 .pagination-btn {
-  width: 70%;
+  max-width: 350px;
+  // width: 70%;
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 80px;
   position: relative;
 
   & button {
+    
     width: 100%;
   }
 }
