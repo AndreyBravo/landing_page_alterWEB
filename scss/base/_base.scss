@@ -37,6 +37,9 @@ body {
 section {
   text-align: center;
   margin-top: 130px;
+  &:first-child {
+    margin-top: 0;
+  }
 }
 
 h1 {
@@ -58,7 +61,7 @@ p {
   color: #6c6c6c;
 }
 
-a{
+a {
   display: inline-block;
   text-decoration: none;
 }
@@ -77,7 +80,7 @@ button {
   border: none;
   cursor: pointer;
 
-  &:hover{
+  &:hover {
     color: #fff;
     background: linear-gradient(180deg, #fe5b29 0%, #fcc80c 100%);
   }

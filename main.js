@@ -177,8 +177,14 @@ const swiper = new Swiper('.swiper', {
   },
 
   breakpoints: {
+    // when window width is >= 220px
+    220: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      direction: 'vertical'
+    },
     // when window width is >= 320px
-    320: {
+    380: {
       slidesPerView: 2,
       spaceBetween: 20,
       direction: 'vertical'

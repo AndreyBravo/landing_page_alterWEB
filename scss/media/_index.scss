@@ -47,6 +47,10 @@
     line-height: 16px;
   }
 
+  .logo {
+    max-width: 48px;
+  }
+
   .navbar-list {
     gap: 10px;
   }
@@ -56,7 +60,7 @@
   }
 
   .row-img {
-    max-width: 50%; 
+    max-width: 50%;
   }
 
   .promo-grid {
@@ -70,7 +74,7 @@
   }
 
   .swiper {
-    height: 900px;
+    height: 800px;
   }
 
   .shop-img,
@@ -100,7 +104,6 @@
     & .copyright {
       grid-column: 2;
       align-self: center;
-      
     }
 
     &:last-child {
@@ -114,21 +117,21 @@
     grid-column: 1;
   }
 
-  .time{
+  .time {
     grid-row: 1;
     grid-column: 2;
   }
 
-  .time2{
+  .time2 {
     grid-row: 2;
     grid-column: 2;
   }
 
-  .mail{
+  .mail {
     grid-column: 1;
   }
 
-  .copyright{
+  .copyright {
     margin-top: 0;
   }
 
@@ -153,9 +156,18 @@
     width: 90%;
   }
 
+  #main {
+    margin-top: 50px;
+  }
+
   #header a {
     font-size: 14px;
     // font-size: clamp(0.5rem, 2vw, 2rem);
+  }
+
+  .tel img {
+    width: 16px;
+    margin-right: 16.75px;
   }
 
   section {
@@ -194,6 +206,7 @@
     max-width: 100%;
 
     p {
+      max-width: 70%;
       margin-bottom: 10px;
     }
   }
@@ -203,9 +216,10 @@
     margin-top: 20px;
   }
 
-  .shop-img, .shop-text {
+  .shop-img,
+  .shop-text {
     width: 100%;
-}
+  }
 
   .promo-item {
     margin-top: 50px;
@@ -214,18 +228,23 @@
   .row-img {
     max-width: 100%;
     height: 220px;
-    margin: 30px 0 ;
+    margin: 30px 0;
     img {
       height: 100%;
     }
   }
 
-  .contacts-text{
+  .contacts-text {
     margin-top: 30px;
+    gap: 10px;
   }
 
-  .contacts-text-container  a{
-    text-align: left;
+  .contacts-text-container {
+    gap: 10px;
+    & a {
+      text-align: left;
+      line-height: 20px;
+    }
   }
 
   .contacts-map {
@@ -234,16 +253,24 @@
 }
 
 @media screen and (max-width: 380px) {
+  button {
+    width: 80%;
+  }
+
+  .logo {
+    max-width: 27px;
+  }
+
   .promo-grid {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
   }
 
-  .partner-container{
+  .partner-container {
     margin-top: 0;
   }
 
-  .partner-pagination{
+  .partner-pagination {
     margin-top: 0;
   }
 
@@ -252,9 +279,13 @@
     flex-direction: column;
     gap: 50px;
 
-    & img{
+    & img {
       width: 80%;
     }
+  }
+
+  .swiper {
+    height: 300px;
   }
 
   .contacts-container {
@@ -266,11 +297,7 @@
     gap: 10px;
   }
 
-  
-
   .contacts-map {
     height: 170px;
   }
-
-  
 }

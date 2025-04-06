@@ -5,6 +5,7 @@
 }
 
 #header {
+  margin-top: 10px;
   display: flex;
   justify-content: space-between;
   background: #f9f9f9;
@@ -16,7 +17,7 @@
   font-style: normal;
   font-weight: $base-font-weight-500;
   font-size: $base-size-22;
-  line-height: 26px;
+  // line-height: 26px;
   /* identical to box height */
 
   letter-spacing: 0.05em;

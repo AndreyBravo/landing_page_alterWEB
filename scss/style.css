@@ -81,6 +81,9 @@ section {
   text-align: center;
   margin-top: 130px;
 }
+section:first-child {
+  margin-top: 0;
+}
 
 h1 {
   font-family: "Gilroy";
@@ -136,6 +139,7 @@ img {
 }
 
 #header {
+  margin-top: 10px;
   display: flex;
   justify-content: space-between;
   background: #f9f9f9;
@@ -147,7 +151,6 @@ img {
   font-style: normal;
   font-weight: 500;
   font-size: 22px;
-  line-height: 26px;
   /* identical to box height */
   letter-spacing: 0.05em;
   color: #343434;
@@ -174,7 +177,6 @@ img {
 
 .logo {
   max-width: 75px;
-  max-height: 98px;
 }
 
 .tel {
@@ -340,7 +342,6 @@ img {
 
 .instagram-link {
   margin: 65px 0 0 0;
-  padding: 28px 72px;
   background: linear-gradient(#ff7144, #fdce26);
   border-radius: 70px;
   color: black;
@@ -586,6 +587,9 @@ img {
     font-size: 16px;
     line-height: 16px;
   }
+  .logo {
+    max-width: 48px;
+  }
   .navbar-list {
     gap: 10px;
   }
@@ -604,7 +608,7 @@ img {
     margin: 130px auto 0 auto;
   }
   .swiper {
-    height: 900px;
+    height: 800px;
   }
   .shop-img,
   .shop-text {
@@ -667,8 +671,15 @@ img {
   body {
     width: 90%;
   }
+  #main {
+    margin-top: 50px;
+  }
   #header a {
     font-size: 14px;
+  }
+  .tel img {
+    width: 16px;
+    margin-right: 16.75px;
   }
   section {
     margin-top: 45px;
@@ -699,13 +710,15 @@ img {
     max-width: 100%;
   }
   .pagination-item-text p {
+    max-width: 70%;
     margin-bottom: 10px;
   }
   .shop-item {
     flex-direction: column;
     margin-top: 20px;
   }
-  .shop-img, .shop-text {
+  .shop-img,
+  .shop-text {
     width: 100%;
   }
   .promo-item {
@@ -721,15 +734,26 @@ img {
   }
   .contacts-text {
     margin-top: 30px;
+    gap: 10px;
+  }
+  .contacts-text-container {
+    gap: 10px;
   }
   .contacts-text-container a {
     text-align: left;
+    line-height: 20px;
   }
   .contacts-map {
     margin-top: 30px;
   }
 }
 @media screen and (max-width: 380px) {
+  button {
+    width: 80%;
+  }
+  .logo {
+    max-width: 27px;
+  }
   .promo-grid {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -747,6 +771,9 @@ img {
   }
   .partner-slider-group img {
     width: 80%;
+  }
+  .swiper {
+    height: 300px;
   }
   .contacts-container {
     margin-bottom: 40px;
